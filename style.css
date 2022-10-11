@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;   
+    background-image: url("bgimage.jpg");
+}
+#block{
+    width: 490px;
+    height: 590px;
+    margin: auto;
+    display: grid;
+    flex-wrap: wrap;
+    perspective: 1000px;    
+}
+.game-info{
+    font-weight: normal;
+    text-align: center;
+    font-family: cursive;
+    font-size: x-large;
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    margin: 0;
+    font-size: xx-large;
+    font-family: cursive;
+    text-align: center;
+}
+#memory-Game{
+    width: 490px;
+    height: 490px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+.card{
+    height: 20%;
+    width: 25%;
+    position: relative;
+    border: 3px solid tomato;
+    transform-style: preserve-3d;
+    transition: transform .4s;
+}
+#demo{
+    height: 50px;
+    width: 70px;
+
+}
+.card:active{
+    transform: scale(.90);
+    transition: transform .1.8s;
+}
+
+.card.flip{
+    transform: rotateY(180deg);
+}
+
+.face, .back{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 4px;
+    backface-visibility: hidden;
+}
+.face{
+    transform: rotateY(180deg);
+}
