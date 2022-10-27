@@ -6,15 +6,19 @@
 body{
     height: 100vh;
     display: flex;   
-    background-image: url("bgimage.jpg");
+    background-image: url("imgs/bgimage.jpg");
 }
+
 #block{
     width: 490px;
     height: 590px;
     margin: auto;
     display: grid;
     flex-wrap: wrap;
-    perspective: 1000px;    
+    perspective: 1000px;
+}
+.opacity{
+    opacity: 75%;
 }
 .game-info{
     font-weight: normal;
@@ -33,24 +37,22 @@ body{
 }
 #memory-Game{
     width: 490px;
-    height: 490px;
+    height: 520px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
 }
 .card{
-    height: 20%;
-    width: 25%;
+    height: 16.666%;/* 100/x */
+    width: 25%;/* 100/y */
     position: relative;
     border: 3px solid tomato;
     transform-style: preserve-3d;
     transition: transform .4s;
 }
-#demo{
-    height: 50px;
-    width: 70px;
-
+.card.hidden{
+    display: none;
 }
 .card:active{
     transform: scale(.90);
